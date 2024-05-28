@@ -1,20 +1,13 @@
 // Transaction.js
 import React from "react";
 
-function Transaction({ transaction, onDelete }) {
-  const handleDelete = () => {
-    onDelete(transaction.id);
-  };
-
+function Transaction({ Date,Description,Category,Amount}) {
   return (
     <tr>
-      <td>{transaction.date}</td>
-      <td>{transaction.description}</td>
-      <td>{transaction.category}</td>
-      <td>{transaction.amount}</td>
-      <td>
-        <button onClick={handleDelete}>Delete</button>
-      </td>
+      <td>{Date}</td>
+      <td>{Description}</td>
+      <td>{Category}</td>
+      <td>{Amount}</td>
     </tr>
   );
 }
